@@ -1,11 +1,12 @@
 import random
 
+
 def jogar():
     print("*********************************")
     print("Bem Vindo ao Jogo de Adivinhação!")
     print("*********************************")
 
-    numero_secreto = random.randrange(1,101)
+    numero_secreto = random.randrange(1, 101)
     total_de_tentativas = 0
     pontos = 1000
 
@@ -46,6 +47,7 @@ def jogar():
             pontos -= (abs(numero_secreto - chute))
 
     print("Fim do Jogo")
+
 
 if __name__ == "__main__":
     jogar()
