@@ -10,9 +10,12 @@ def jogar():
     while not enforcou and not acertou:
         chute = input("Qual letra? ")
 
+        #Tirando os possíveis espaços em brancos
+        chute = chute.strip()
+
         index = 0
         for letra in palavra_secreta:
-            if chute == letra:
+            if chute.upper() == letra.upper():
                 print(f'Encontrei a letra {chute} na prosição {index}')
             index += 1
 
