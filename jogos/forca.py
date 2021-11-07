@@ -4,8 +4,10 @@ def jogar():
     print("*********************************")
 
     palavra_secreta = "banana".upper()
-    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
+    letras_acertadas = ["_" for letra in palavra_secreta]
 
+    print(letras_acertadas)
+    
     enforcou = False
     acertou = False
     erros = 0
@@ -23,9 +25,9 @@ def jogar():
                 index += 1
         else:
             erros += 1
+
         enforcou = erros == 6
         acertou = "_" not in letras_acertadas
-
         print(letras_acertadas)
 
     if acertou:
